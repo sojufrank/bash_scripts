@@ -13,7 +13,7 @@ uptime=`uptime | tr -s ' ' | cut -d ' ' -f 4`
 kernel=`uname -v | cut -c 5-55 | cut -c 1-15`
 
 #ip address
-ip=`hostname -I | awk '{print $1}'`
+ip=`hostname -I | cut -d ' ' -f 1`
 
 #memory variables
 total_memory=`free -h | grep Mem | tr -s ' ' | cut -d ' ' -f 2`
